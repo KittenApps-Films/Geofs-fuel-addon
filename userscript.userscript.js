@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Fuel
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/KittenApps-Films
 // @version      2025-02-01
 // @description  Add fuel to geo-fs
 // @author       Noah Scott Davidson
