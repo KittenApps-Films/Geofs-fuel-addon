@@ -6,3 +6,5 @@ This addon adds a fuel gauge, decreases the fuel according to engine level and t
 Note: To refuel tap the fuel gauge.<br>
 **How to install**<br>
 To install copy userscript.js into Tampermonkey. Made by Kitten Films<br>
+
+The fuel gauge does cover the stall alert, but you can still see it through the gauge.
