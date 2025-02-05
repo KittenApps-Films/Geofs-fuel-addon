@@ -11,7 +11,6 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=geo-fs.com
 // @grant unsafeWindow
 // ==/UserScript==
-console.log("run")
 
 let fuelvariable = 100
 let engine = true
