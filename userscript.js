@@ -1,3 +1,16 @@
+// ==UserScript==
+// @name         Fuel
+// @namespace    http://tampermonkey.net/
+// @version      2025-02-01
+// @description  Add fuel to geo-fs
+// @author       Noah Scott Davidson
+// @match        http://geo-fs.com/geofs.php?v=*
+// @match        http://www.geo-fs.com/geofs.php?v=*
+// @match        https://geo-fs.com/geofs.php?v=*
+// @match        https://www.geo-fs.com/geofs.php?v=*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=geo-fs.com
+// @grant unsafeWindow
+// ==/UserScript==
 
 let fuelvariable = 100
 let engine = true
