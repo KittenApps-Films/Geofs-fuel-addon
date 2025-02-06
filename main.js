@@ -99,5 +99,5 @@ function fuelReduce() {
     if (engine === false) {
             window.geofs.aircraft.instance.engine.on = false
         }
-    console.log(egine)
+    console.log(engine)
 }
