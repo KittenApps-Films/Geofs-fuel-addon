@@ -1,3 +1,4 @@
+console.log("Geofs fuel running")
 let fuelvariable = 100
 let engine = true
 const between = (x, min, max) => {
