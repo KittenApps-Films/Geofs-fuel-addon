@@ -75,10 +75,10 @@ window.addEventListener('load', function() {
 setInterval(fuelReduce, 500);
 
 function fuelReduce() {
-    if (set === true && geofs.pause == false) {
+    if (set === true && window.geofs.pause == false) {
         if (fuel.value > 0) {
             let minusFuel = 0
-            let rpm = geofs.aircraft.instance.engine.rpm
+            let rpm = window.geofs.aircraft.instance.engine.rpm
             if (rpm == 0) {
                 minusFuel = 0
             } else if (between(rpm, 0, 1000)) {
@@ -108,7 +108,7 @@ function fuelReduce() {
             engine = true
         }
         if (engine === false) {
-            geofs.aircraft.instance.engine.on = false
+            window.geofs.aircraft.instance.engine.on = false
         }
     }
 }
