@@ -92,6 +92,7 @@ function fuelReduce() {
             }
             fuel.value -= minusFuel
             engine = true
+            console.log(fuel.value, minusFuel)
         }
     }
     if (engine === false) {
