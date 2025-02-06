@@ -93,8 +93,8 @@ function fuelReduce() {
             fuel.value -= minusFuel
             engine = true
         }
-        if (engine === false) {
+    }
+    if (engine === false) {
             window.geofs.aircraft.instance.engine.on = false
         }
-    }
 }
