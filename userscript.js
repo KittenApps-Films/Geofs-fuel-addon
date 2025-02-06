@@ -104,8 +104,8 @@ function fuelReduce() {
             } else {
                 minusFuel = 0.01
             }
-            fuel.value -= minusFuel
             engine = true
+            fuel.value -= minusFuel 
         }
         if (engine === false) {
             unsafeWindow.geofs.aircraft.instance.engine.on = false
