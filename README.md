@@ -8,3 +8,5 @@ Note: To refuel tap the fuel gauge.<br>
 To install copy userscript.js into Tampermonkey. Made by Kitten Films<br>
 
 The fuel gauge does cover the stall alert, but you can still see it through the gauge.
+
+Curently you have 1:23 of fuel.
