@@ -1,6 +1,7 @@
-console.log("Geofs fuel running")
-let fuelvariable = 100
-let engine = true
+'use strict';
+console.log("Geofs fuel running");
+let fuelvariable = 100;
+let engine = true;
 const between = (x, min, max) => {
     return x >= min && x <= max;
 }
@@ -11,8 +12,12 @@ const variableHandler = {
         bar.value = value;
         let text = document.getElementById("fuel-text");
         text.innerHTML = "Fuel " + Math.trunc(value) + "%";
-        if (fuel.value < 0 || fuel.value == 0) {
-            engine = false
+        if (value < 0 || value == 0) {
+            engine = false;
+            console.log("falseADD");
+        } else {
+            engine = true;
+            console.log("trueADD");
         }
         target[property] = value;
         return true;
@@ -21,11 +26,10 @@ const variableHandler = {
 
 const fuel = new Proxy({ value: fuelvariable }, variableHandler);
 
-let set = false
+let set = false;
 
-window.addEventListener('load', function() {
     function fuelAdd() {
-        fuel.value = 100
+        fuel.value = 100;
     }
     //make_the_bar
     //get autopilot bar
@@ -34,7 +38,7 @@ window.addEventListener('load', function() {
     //make the div
     let bt = document.createElement("div");
     bt.onclick = () => {
-        fuelAdd()
+        fuelAdd();
     }
     bt.className = "control-pad";
     bt.id = "test-bar";
@@ -54,18 +58,17 @@ window.addEventListener('load', function() {
     //percent text
     let bt4 = document.createElement("p");
     bt4.innerHTML = "Fuel " + Math.trunc(fuel.value) + "%";
-    bt4.id = "fuel-text"
+    bt4.id = "fuel-text";
     bt2.insertBefore(bt4, bt2.children[0]);
-    set = true
-});
+    set = true;
 
 setInterval(fuelReduce, 500);
 
 function fuelReduce() {
     if (set === true && window.geofs.pause == false) {
         if (fuel.value > 0) {
+            let rpm = window.geofs.aircraft.instance.engine.rpm;
             let minusFuel = 0
-            let rpm = window.geofs.aircraft.instance.engine.rpm
             if (rpm == 0) {
                 minusFuel = 0
             } else if (between(rpm, 0, 1000)) {
@@ -91,13 +94,12 @@ function fuelReduce() {
             } else {
                 minusFuel = 0.01
             }
-            fuel.value -= minusFuel
             engine = true
-            console.log(fuel.value, minusFuel)
+            fuel.value -= minusFuel
         }
     }
     if (engine === false) {
-            window.geofs.aircraft.instance.engine.on = false
-        }
-    console.log(engine)
+            window.geofs.aircraft.instance.engine.on = false;
+            window.geofs.aircraft.instance.engine.rpm = 0;
+    }
 }
