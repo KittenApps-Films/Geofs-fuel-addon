@@ -14,10 +14,8 @@ const variableHandler = {
         text.innerHTML = "Fuel " + Math.trunc(value) + "%";
         if (value < 0 || value == 0) {
             engine = false;
-            console.log("falseADD");
         } else {
             engine = true;
-            console.log("trueADD");
         }
         target[property] = value;
         return true;
