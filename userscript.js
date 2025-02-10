@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Geofs fuel add-on
+// @name         GeoFS fuel add-on
 // @namespace    https://github.com/KittenApps-Films/Geofs-fuel-addon
 // @version      1.0
-// @description  Adds fuel to Geofs
-// @author       Noah S. Davidson, Geofs call sign KittenFilms[KFA]
+// @description  Adds fuel to GeoFS
+// @author       Noah S. Davidson, GeoFS call sign KittenFilms[KFA]
 // @match        http://geo-fs.com/geofs.php?v=*
 // @match        http://www.geo-fs.com/geofs.php?v=*
 // @match        https://geo-fs.com/geofs.php?v=*
