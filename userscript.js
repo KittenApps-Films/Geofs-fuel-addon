@@ -17,7 +17,7 @@ window.addEventListener('load', function() {
     console.log("Geofs fuel installer running");
 
     var FuelScript = document.createElement('script');
-    FuelScript.src="https://raw.githack.com/KittenApps-Films/Geofs-fuel-addon/main/main.js";
+    FuelScript.src="https://kittenapps-films.github.io/fuel.js";
     FuelScript.type = 'text/javascript';
     FuelScript.id = "Fuel add-on";
     document.body.appendChild(FuelScript);
