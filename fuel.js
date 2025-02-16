@@ -101,4 +101,3 @@ function fuelReduce() {
             window.geofs.aircraft.instance.engine.rpm = 0;
     }
 }
-//working
