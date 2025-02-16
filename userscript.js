@@ -23,4 +23,3 @@ window.addEventListener('load', function() {
     document.body.appendChild(FuelScript);
     console.log("Fuel installed");
 })
-//it works
