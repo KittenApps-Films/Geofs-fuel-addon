@@ -1,6 +1,10 @@
 'use strict';
 console.log("Geofs fuel running");
-let fuelvariable = 100;
+if (!localStorage.getItem("fuel")) {
+    let fuelvariable = 100;
+} else {
+    let fuelvariable = localStorage.getItem("fuel");  
+}
 let engine = true;
 const between = (x, min, max) => {
     return x >= min && x <= max;
@@ -100,4 +104,5 @@ function fuelReduce() {
             window.geofs.aircraft.instance.engine.on = false;
             window.geofs.aircraft.instance.engine.rpm = 0;
     }
+    localStorage.setItem(fuel.value, "fuel");
 }
