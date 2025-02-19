@@ -1,10 +1,6 @@
 'use strict';
 console.log("Geofs fuel running");
-if (!localStorage.getItem("fuel")) {
-    let fuelvariable = 100;
-} else {
-    let fuelvariable = localStorage.getItem("fuel");  
-}
+let fuelvariable = 100;
 let engine = true;
 const between = (x, min, max) => {
     return x >= min && x <= max;
@@ -27,6 +23,12 @@ const variableHandler = {
 };
 
 const fuel = new Proxy({ value: fuelvariable }, variableHandler);
+
+if (!localStorage.getItem("fuel")) {
+    fuel.value = 100 
+} else {
+    fuel.value = localStorage.getItem("fuel");  
+}
 
 let set = false;
 
