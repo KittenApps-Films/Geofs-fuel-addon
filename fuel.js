@@ -24,12 +24,6 @@ const variableHandler = {
 
 const fuel = new Proxy({ value: fuelvariable }, variableHandler);
 
-if (!localStorage.getItem("fuel")) {
-    fuel.value = 100 
-} else {
-    fuel.value = localStorage.getItem("fuel");  
-}
-
 let set = false;
 
     function fuelAdd() {
@@ -65,6 +59,12 @@ let set = false;
     bt4.id = "fuel-text";
     bt2.insertBefore(bt4, bt2.children[0]);
     set = true;
+
+if (!localStorage.getItem("fuel")) {
+    fuel.value = 100 
+} else {
+    fuel.value = localStorage.getItem("fuel");  
+}
 
 setInterval(fuelReduce, 500);
 
