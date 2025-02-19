@@ -106,5 +106,5 @@ function fuelReduce() {
             window.geofs.aircraft.instance.engine.on = false;
             window.geofs.aircraft.instance.engine.rpm = 0;
     }
-    localStorage.setItem(fuel.value, "fuel");
+    localStorage.setItem("fuel", fuel.value);
 }
