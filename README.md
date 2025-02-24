@@ -8,7 +8,7 @@ To install copy userscript.js into Tampermonkey.
 
 **Notes**<br>
 The fuel gauge does cover the stall alert, but you can still see it through the gauge.<br>
-To refuel tap the fuel gauge.<br>
+To change the fuel value tap the fuel gauge, then a window will apear to change fuel value.<br>
 Curently you have 1:23 of fuel.<br>
 To make a custom fuel level, type fuel.value = customLevel in console where customLevel in a double (number with decimal) of the level you want.<br>
 
