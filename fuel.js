@@ -27,7 +27,7 @@ const fuel = new Proxy({ value: fuelvariable }, variableHandler);
 let set = false;
 
     function fuelAdd() {
-        var newV = prompt("Custom Value")
+        var newV = prompt("Custom fuel value")
         var num = Number(new)
         if (isNaN(num)) {
             alert("That's not a number")
