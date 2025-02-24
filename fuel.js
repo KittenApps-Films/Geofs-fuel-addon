@@ -27,7 +27,13 @@ const fuel = new Proxy({ value: fuelvariable }, variableHandler);
 let set = false;
 
     function fuelAdd() {
-        fuel.value = 100;
+        var newV = prompt("Custom Value")
+        var num = Number(new)
+        if (isNaN(num)) {
+            alert("That's not a number")
+        } else {
+            fuel.value = num;
+        }
     }
     //make_the_bar
     //get autopilot bar
