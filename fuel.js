@@ -28,7 +28,7 @@ let set = false;
 
     function fuelAdd() {
         var newV = prompt("Custom fuel value")
-        var num = Number(new)
+        var num = Number(newV)
         if (isNaN(num)) {
             alert("That's not a number")
         } else {
