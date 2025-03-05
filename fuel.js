@@ -12,7 +12,7 @@ const variableHandler = {
         bar.value = value;
         let text = document.getElementById("fuel-text");
         text.innerHTML = "Fuel " + Math.trunc(value) + "%";
-        if (value < 0 || value == 0) {
+        if (value <= 0) {
             engine = false;
         } else {
             engine = true;
@@ -32,7 +32,9 @@ let set = false;
         if (isNaN(num)) {
             alert("That's not a number")
         } else {
-            fuel.value = num;
+            if (fuel.value <= 0 && fuel.value <= 100) {
+                fuel.value = num;
+            }
         }
     }
     //make_the_bar
